@@ -67,6 +67,13 @@ MAIL_FROM_ADDRESS="hello@example.com"
 MAIL_FROM_NAME="Laravel"
 ```
 
+SuperAdmin credentials (that is created via seeder)
+
+```
+email: admin@store.com
+password: password
+```
+
 I handled the case for REVOKE payment. For that you need to setup the webhook in your stripe account. You need to replace the host: 
 
 ```
