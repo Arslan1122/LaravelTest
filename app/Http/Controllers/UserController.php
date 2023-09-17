@@ -7,11 +7,15 @@ use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\View\View;
 
 class UserController extends Controller
 {
 
-    public function index()
+    /**
+     * @return View
+     */
+    public function index(): View
     {
         $users = User::whereHas("roles", function($q){
             $q->where("name", User::B2B_ROLE)

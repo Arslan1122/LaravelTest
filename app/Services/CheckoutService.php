@@ -108,6 +108,11 @@ class CheckoutService
 
     }
 
+    /**
+     * @param $id
+     * @return bool
+     * @throws \Stripe\Exception\ApiErrorException
+     */
     public function refundPayment($id)
     {
         Stripe::setApiKey(config('services.stripe.secret'));

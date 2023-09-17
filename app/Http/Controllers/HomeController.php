@@ -42,7 +42,11 @@ class HomeController extends Controller
         return view('checkout', compact('product'));
     }
 
-    public function store(OrderRequest $request)
+    /**
+     * @param OrderRequest $request
+     * @return RedirectResponse
+     */
+    public function store(OrderRequest $request): RedirectResponse
     {
         $this->checkoutService->processCheckoutAndPayment($request);
 
